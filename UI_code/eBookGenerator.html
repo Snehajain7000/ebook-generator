@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <link rel="icon" href="images/fevicon.png" type="image/gif" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>eBookGenerator</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+</head>
+
+<style>
+    input[type=text], select {
+      width: 20%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+	  text-align: center;
+    }
+    
+    input[type=submit] {
+      width: 20%;
+      background-color: #4c4faf;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    p {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+	* {
+	  box-sizing: border-box;
+	}
+
+	input[type=text], select, textarea {
+	  width: 100%;
+	  padding: 12px;
+	  border: 1px solid #ccc;
+	  border-radius: 4px;
+	  resize: vertical;
+	}
+
+	label {
+	  padding: 12px 12px 12px 0;
+	  display: inline-block;
+	}
+
+	input[type=submit] {
+	  background-color: #04AA6D;
+	  color: white;
+	  padding: 12px 20px;
+	  border: none;
+	  border-radius: 4px;
+	  cursor: pointer;
+	  float: right;
+	  width: 100%;
+	}
+
+	input[type=submit]:hover {
+	  background-color: #45a049;
+	}
+
+	.container1 {
+	  border-radius: 15px 50px 30px;
+	  background-color: #f2f2f2;
+	  padding: 20px;
+	  width: 63%;
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+
+	.col-75 {
+	  width: 60%;
+	  margin-top: 6px;
+	  margin-right: 3px;
+	  display: inline-block;
+	  justify-content: center;
+	}
+	
+	.col-50 {
+	  display: flex;
+	  width: 45%;
+	  margin-top: 6px;
+	  margin-right: 42.5px;
+	  margin-left: 3px;
+	  float: left;
+	  margin-bottom: 6px;
+	}
+	
+	.col-30 {
+	  display: flex;
+	  width: 30%;
+	  margin-top: 6px;
+	  margin-right: 25px;
+	  margin-left: 3px;
+	  float: left;
+	  margin-bottom: 6px;
+	}
+
+	#image_section {
+		text-align: right;
+		width: 20%;
+		height: 50%;
+	}
+	
+}
+    </style>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section long_section px-0">
+      <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <a class="navbar-brand" href="index.html">
+          <span>
+            Notes2Book
+          </span>
+        </a>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""> </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav  ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html"> About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="eBookGenerator.html">eBook Generator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Premium and Enterprise</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="themes.html">Cover Themes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="quote_btn-container">
+            <a href="">
+              <span>
+                Login
+              </span>
+              <i class="fa fa-user" aria-hidden="true"></i>
+            </a>
+            <form class="form-inline">
+              <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- furniture section -->
+  <br><br>
+    <center>
+	<div class="container1">
+	<form onsubmit="return false">
+		<b><h1 style="font-family:Helvetica;">Please Provide Basic Information about Your Book</h1></b><br>
+		<div class="col-75">
+			<input type="text" id="title" name="title" placeholder="Title of the Book" required><br>
+		</div>
+		<div class="col-75">
+			<input type="text" id="author" name="author" placeholder="Name of the Author" required><br>
+		</div>
+			<div class="col-75">
+			<select name="genre" id="genre">
+				<option value=''>Themes</option>
+				<option value="Black Romance">Black Romance</option>
+				<option value="Forever">Forever</option>
+				<option value="Romance">Romance</option>
+				<option value="Horror">Horror</option>
+				<option value="Nature">Nature</option>
+				<option value="Simple Paint">Simple Paint</option>
+				<option value="Technology">Technology</option>
+				<option value="Sky Design">Sky Design</option>
+			</select>
+		</div>
+		<div class="col-75">
+			<select name="num_of_chapters" id="num_of_chapters" value="Number of Chapters">
+				<option value=''>Number of Chapters</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="3">Three</option>
+				<option value="4">Four</option>
+			</select>
+			<br>
+		</div>
+		<br><i><h1 style="font-family:Helvetica; margin-top:10px;">Add Chapter wise Information</h1></i><br>
+	    <div class="col-50">
+			<select name="parts_of_chapter1" id="parts_of_chapter1">
+				<option value=''>Are there any Parts in Chapter 1</option>
+				<option value="1">Yes</option>
+				<option value="2">No</option>
+			</select>
+		</div>
+		<div class="col-50">
+			<select name="num_of_parts_in_chapter1" id="num_of_parts_in_chapter1">
+				<option value=''>How many parts in Chapter 1</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="2">Three</option>
+			</select>
+			<br>
+		</div>
+		<div class="col-50">
+			<select name="parts_of_chapter2" id="parts_of_chapter2">
+				<option value=''>Are there any Parts in Chapter 2</option>
+				<option value="1">Yes</option>
+				<option value="2">No</option>
+			</select>
+		</div>
+		<div class="col-50">
+			<select name="num_of_parts_in_chapter2" id="num_of_parts_in_chapter2">
+				<option value=''>How many parts in Chapter 2</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="2">Three</option>
+			</select>
+			<br>
+		</div>
+		<div class="col-50">
+			<select name="parts_of_chapter3" id="parts_of_chapter3">
+				<option value=''>Are there any Parts in Chapter 3</option>
+				<option value="1">Yes</option>
+				<option value="2">No</option>
+			</select>
+		</div>
+		<div class="col-50">
+			<select name="num_of_parts_in_chapter3" id="num_of_parts_in_chapter3">
+				<option value=''>How many parts in Chapter 3</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="2">Three</option>
+			</select>
+			<br>
+		</div>
+		<div class="col-50">
+			<select name="parts_of_chapter4" id="parts_of_chapter4">
+				<option value=''>Are there any Parts in Chapter 4</option>
+				<option value="1">Yes</option>
+				<option value="2">No</option>
+			</select>
+		</div>
+		<div class="col-50">
+			<select name="num_of_parts_in_chapter4" id="num_of_parts_in_chapter4">
+				<option value=''>How many parts in Chapter 4</option>
+				<option value="1">One</option>
+				<option value="2">Two</option>
+				<option value="2">Three</option>
+			</select>
+		</div>
+		<br><br><i><h1 style="font-family:Helvetica; margin-top:15px;">Add Part wise Information of chapter 1</h1></i><br>
+		<div class="col-30">
+			<input type="text" id="titlech1pt1" name="titlept1" placeholder="Title of Chapter 1, Part 1"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech1pt2" name="titlept2" placeholder="Title of Chapter 1, Part 2"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech1pt3" name="titlept3" placeholder="Title of Chapter 1, Part 3"><br>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch1pt1" name="chapter1" placeholder="Conetent of Chapter 1, Part 1" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch1pt2" name="chapter2" placeholder="Conetent of Chapter 1, Part 2" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch1pt3" name="chapter3" placeholder="Conetent of Chapter 1, Part 3" style="height:150px;text-align:center"></textarea>
+		</div>
+		<br>
+		<br><i><h1 style="font-family:Helvetica; margin-top:25px;">Add Part wise Information of chapter 2</h1></i><br>
+		<div class="col-30">
+			<input type="text" id="titlech2pt1" name="titlech2pt1" placeholder="Title of Chapter 2, Part 1"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech2pt2" name="titlech2pt2" placeholder="Title of Chapter 2, Part 2"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech2pt3" name="titlech2pt3" placeholder="Title of Chapter 2, Part 3"><br>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch2pt1" name="chapter1" placeholder="Conetent of Chapter 2, Part 1" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch2pt2" name="chapter2" placeholder="Conetent of Chapter 2, Part 2" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch2pt3" name="chapter3" placeholder="Conetent of Chapter 2, Part 3" style="height:150px;text-align:center"></textarea>
+		</div>
+		<br>
+		<br><i><h1 style="font-family:Helvetica; margin-top:25px;">Add Part wise Information of chapter 3</h1></i><br>
+		<div class="col-30">
+			<input type="text" id="titlech3pt1" name="titlech3pt1" placeholder="Title of Chapter 3, Part 1"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech3pt2" name="titlech3pt2" placeholder="Title of Chapter 3, Part 2"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech3pt3" name="titlech3pt3" placeholder="Title of Chapter 3, Part 3"><br>
+		</div>		
+		<div class="col-30">
+		  <textarea id="ch3pt1" name="chapter1" placeholder="Conetent of Chapter 3, Part 1" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch3pt2" name="chapter2" placeholder="Conetent of Chapter 3, Part 2" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch3pt3" name="chapter3" placeholder="Conetent of Chapter 3, Part 3" style="height:150px;text-align:center"></textarea>
+		</div>
+		<br>
+		<br><i><h1 style="font-family:Helvetica; margin-top:25px;">Add Part wise Information of chapter 4</h1></i><br>
+		<div class="col-30">
+			<input type="text" id="titlech4pt1" name="titlech4pt1" placeholder="Title of Chapter 4, Part 1"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech4pt2" name="titlech4pt2" placeholder="Title of Chapter 4, Part 2"><br>
+		</div>
+		<div class="col-30">
+			<input type="text" id="titlech4pt3" name="titlech4pt3" placeholder="Title of Chapter 4, Part 3"><br>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch4pt1" name="chapter1" placeholder="Conetent of Chapter 4, Part 1" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch4pt2" name="chapter2" placeholder="Conetent of Chapter 4, Part 2" style="height:150px;text-align:center"></textarea>
+		</div>
+		<div class="col-30">
+		  <textarea id="ch4pt3" name="chapter3" placeholder="Conetent of Chapter 4, Part 3" style="height:150px;text-align:center"></textarea>
+		</div>
+		<br>
+	<div class="col-75">
+	<center>
+    <input onclick="saveTextAsFile()" type="submit" id="btn-form" value="Generate Now">
+	</center>
+	</div>
+	</form>
+	</div>
+	<script>
+	function changeButtonDesc(){
+		var elem = document.getElementById("btn-form");
+		if (elem.value=="Generate Now"){ 
+			elem.value = "Download Now";
+		}
+	}
+	function saveTextAsFile() {
+		var elem = document.getElementById("btn-form");
+		if (elem.value=="Generate Now"){ 
+			var title = document.getElementById("title").value;
+			var author = document.getElementById("author").value;
+			var genre = document.getElementById("genre").value;
+			var chapterCount = document.getElementById("num_of_chapters").value;
+			var ch1pt1 = document.getElementById("ch1pt1").value;
+			var ch1pt2 = document.getElementById("ch1pt2").value;
+			var ch1pt3 = document.getElementById("ch1pt3").value;
+			var ch2pt1 = document.getElementById("ch2pt1").value;
+			var ch2pt2 = document.getElementById("ch2pt2").value;
+			var ch2pt3 = document.getElementById("ch2pt3").value;
+			var ch3pt1 = document.getElementById("ch3pt1").value;
+			var ch3pt2 = document.getElementById("ch3pt2").value;
+			var ch3pt3 = document.getElementById("ch3pt3").value;
+			var ch4pt1 = document.getElementById("ch4pt1").value;
+			var ch4pt2 = document.getElementById("ch4pt2").value;
+			var ch4pt3 = document.getElementById("ch4pt3").value;
+			
+			var ch1pt = document.getElementById("parts_of_chapter1").value;
+			var ch1ptCount = document.getElementById("num_of_parts_in_chapter1").value;
+			var ch2pt = document.getElementById("parts_of_chapter2").value;
+			var ch2ptCount = document.getElementById("num_of_parts_in_chapter2").value;
+			var ch3pt = document.getElementById("parts_of_chapter3").value;
+			var ch3ptCount = document.getElementById("num_of_parts_in_chapter3").value;
+			var ch4pt = document.getElementById("parts_of_chapter4").value;
+			var ch4ptCount = document.getElementById("num_of_parts_in_chapter4").value;
+			
+			var ch1pt1title = document.getElementById("titlech1pt1").value;
+			var ch1pt2title = document.getElementById("titlech1pt2").value;
+			var ch1pt3title = document.getElementById("titlech1pt3").value;
+			var ch2pt1title = document.getElementById("titlech2pt1").value;
+			var ch2pt2title = document.getElementById("titlech2pt2").value;
+			var ch2pt3title = document.getElementById("titlech2pt3").value;
+			var ch3pt1title = document.getElementById("titlech3pt1").value;
+			var ch3pt2title = document.getElementById("titlech3pt2").value;
+			var ch3pt3title = document.getElementById("titlech3pt3").value;
+			var ch4pt1title = document.getElementById("titlech4pt1").value;
+			var ch4pt2title = document.getElementById("titlech4pt2").value;
+			var ch4pt3title = document.getElementById("titlech4pt3").value;
+			var textToSave = title+";"+author+";"+genre+";"+chapterCount+";"+ch1pt+":"+ch1ptCount+":"+ch1pt1title+":"+ch1pt1+":"+ch1pt2title+":"+ch1pt2+":"+ch1pt3title+":"+ch1pt3+";"+ch2pt+":"+ch2ptCount+":"+ch2pt1title+":"+ch2pt1+":"+ch2pt2title+":"+ch2pt2+":"+ch2pt3title+":"+ch2pt3+";"+ch3pt+":"+ch3ptCount+":"+ch3pt1title+":"+ch3pt1+":"+ch3pt2title+":"+ch3pt2+":"+ch3pt3title+":"+ch3pt3+";"+ch4pt+":"+ch4ptCount+":"+ch4pt1title+":"+ch4pt1+":"+ch4pt2title+":"+ch4pt2+":"+ch4pt3title+":"+ch4pt3+";";
+			var textToSaveAsBlob = new Blob([textToSave], {type:"title/plain"});
+			var textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+			var fileNameToSaveAs = "my-file-name.txt";
+			var downloadLink = document.createElement("a");
+			downloadLink.download = fileNameToSaveAs;
+			downloadLink.innerHTML = "Download File";
+			downloadLink.href = textToSaveAsURL;
+			downloadLink.onclick = destroyClickedElement;
+			downloadLink.style.display = "none";
+			document.body.appendChild(downloadLink);
+			downloadLink.click();
+			setTimeout(function(){ alert("Your file be generated in few minutes, you will see download now option"); }, 2000);
+			setTimeout(changeButtonDesc, 18000);
+			setTimeout(function(){ alert("Your eBook is available to download now"); }, 21000);
+
+		}
+		else{
+			window.open("C:/Users/jainsah/output.pdf");
+		}
+	}
+
+	function destroyClickedElement(event) {
+
+	document.body.removeChild(event.target);
+
+	}
+
+	</script>
+
+  <!-- info section -->
+  <section class="info_section long_section">
+
+    <div class="container">
+      <div class="contact_nav">
+        <a href="">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <span>
+            Call : +01 123455678990
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>
+            Email : demo@gmail.com
+          </span>
+        </a>
+        <a href="">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+          <span>
+            VIT Bhopal
+          </span>
+        </a>
+      </div>
+
+      <div class="info_top ">
+        <div class="row ">
+          <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="info_links">
+              <h4>
+                QUICK LINKS
+              </h4>
+              <div class="info_links_menu">
+                <a class="" href="index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="" href="about.html"> About</a>
+                <a class="" href="furniture.html">Tool</a>
+                <a class="" href="pricing.html">Pricing</a>
+				<a class="" href="themes.html">Cover Themes</a>
+                <a class="" href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+            <div class="info_post">
+              <h5>
+                INSTAGRAM FEEDS
+              </h5>
+              <div class="post_box">
+                <div class="img-box">
+                  <img src="images/ins1.png" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/ins2.png" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/ins3.png" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/ins4.png" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/ins5.png" alt="">
+                </div>
+                <div class="img-box">
+                  <img src="images/ins1.png" alt="">
+                </div>
+				<div class="img-box">
+                  <img src="images/ins6.png" alt="">
+                </div>
+				<div class="img-box">
+                  <img src="images/ins7.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="info_form">
+              <h4>
+                SIGN UP TO OUR NEWSLETTER
+              </h4>
+              <form action="">
+                <input type="text" placeholder="Enter Your Email" />
+                <button type="submit">
+                  Subscribe
+                </button>
+              </form>
+              <div class="social_box">
+                <a href="">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">VIT Bhopal Project Exhibition Group 170</a>
+      </p>
+    </div>
+  </footer>
+  <!-- footer section -->
+
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>
