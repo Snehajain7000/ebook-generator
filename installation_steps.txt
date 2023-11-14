@@ -1,0 +1,16 @@
+You need Python3 or above and the below libraries installed:
+
+
+
+------------------------------------------------------------
+pip install jinja2
+pip install img2pdf
+pip install image
+pip install pillow
+pip install aspose-words
+pip install borb
+
+
+------------------------------------------------------------
+
+VS Code as Compiling Tool
